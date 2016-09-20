@@ -25,7 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -58,13 +58,6 @@
      id="desc6" />
   <defs
      id="defs8" />
-  <rect
-     style="opacity:1;fill:#2a7fff;stroke:none;stroke-width:14;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
-     id="rect4157"
-     width="518.75"
-     height="520.3125"
-     x="0"
-     y="-0.50000161" />
   <g
      id="miu"
      transform="matrix(21.27283,0,0,21.27283,0.55589402,103.4869)"
