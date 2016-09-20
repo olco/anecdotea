@@ -48,7 +48,6 @@ angular.module('starter.location', ['ngCordova'])
         console.log(position.coords.latitude, position.coords.longitude);
         var dist = getDistanceFromLatLonInKm(lat, long, position.coords.latitude, position.coords.longitude);
         console.log("dist in km is "+dist);
-        if(dist <= minDistance) callback();
       }, function(error) {
         processing = false;
         console.log('code: ' + error.code    + '\n' + 'message: ' + error.message + '\n');
