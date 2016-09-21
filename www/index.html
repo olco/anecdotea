@@ -17,14 +17,23 @@
     </script>-->
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="lib/openlayers/ol.css" rel="stylesheet" />
+    <link href="lib/angular-openlayers-directive/dist/angular-openlayers-directive.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet">
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
 
+    <!-- Open Layers-->
+    <script src="lib/openlayers/ol.js"></script>
+
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- Open Layers + Angular-->
+    <script src="lib/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="lib/angular-openlayers-directive/dist/angular-openlayers-directive.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="lib/ngCordova/dist/ng-cordova.js"></script>
@@ -35,6 +44,8 @@
     <script src="js/controllers.js"></script>
     <script src="js/services.js"></script>
     <script src="js/location.js"></script>
+
+
   </head>
   <body ng-app="starter">
 

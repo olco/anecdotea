@@ -5,9 +5,9 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'starter.location', 'ngCordova'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'starter.location', 'ngCordova', 'openlayers-directive'])
 
-.run(function($ionicPlatform, GeoAlert) {
+.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -21,29 +21,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       StatusBar.styleDefault();
     }
 
+    //navigator.vibrate(1000);
 
-    //Begin the service
-    //hard coded 'target'
-    var lat = 45.937987;
-    var long = -0.955963;
-
-    console.log(navigator.userAgent+'\nlat : '+lat+' long : '+long);
-
-    function onConfirm(idx) {
-      console.log('button '+idx+' pressed');
-    }
-
-    GeoAlert.begin(lat,long, function() {
-      console.log('TARGET');
-      GeoAlert.end();
-      navigator.notification.confirm(
-        'You are near a target!',
-        onConfirm,
-        'Target!',
-        ['Cancel','View']
-      );
-
-    });
+    console.log(navigator.userAgent);
 
   });
 })
@@ -75,12 +55,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     }
   })
 
-  .state('tab.chats', {
-      url: '/chats',
+  .state('tab.locations', {
+      url: '/locations',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
+        'tab-locations': {
+          templateUrl: 'templates/tab-locations.html',
+          controller: 'LocationsCtrl'
         }
       }
     })
@@ -88,7 +68,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   .state('tab.chat-detail', {
     url: '/chats/:chatId',
     views: {
-      'tab-chats': {
+      'tab-locations': {
         templateUrl: 'templates/chat-detail.html',
         controller: 'ChatDetailCtrl'
       }
@@ -116,6 +96,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/chats');
+  $urlRouterProvider.otherwise('/tab/locations');
 
 });

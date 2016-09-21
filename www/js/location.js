@@ -4,10 +4,8 @@ angular.module('starter.location', ['ngCordova'])
   console.log('GeoAlert service instantiated');
   var interval;
   var duration = 6000;
-  var long, lat;
   var processing = false;
   var callback;
-  var minDistance = 10;
 
   // Credit: http://stackoverflow.com/a/27943/52160
   function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
@@ -38,16 +36,27 @@ angular.module('starter.location', ['ngCordova'])
     processing = true;
     console.log('getCurrentPosition');
 
-
     var posOptions = {maximumAge:Infinity, timeout: 30000, enableHighAccuracy: false};
     $cordovaGeolocation
       .getCurrentPosition(posOptions)
       .then(function (position) {
         processing = false;
-        console.log(lat, long);
         console.log(position.coords.latitude, position.coords.longitude);
-        var dist = getDistanceFromLatLonInKm(lat, long, position.coords.latitude, position.coords.longitude);
-        console.log("dist in km is "+dist);
+        //var dist = getDistanceFromLatLonInKm(lat, long, position.coords.latitude, position.coords.longitude);
+        //console.log("dist in km is "+dist);
+
+        var currentPos = [
+          {name:'You',
+            lat:position.coords.latitude,
+            lon:position.coords.longitude,
+            label: {
+              message: 'You',
+              show: false,
+              showOnMouseOver: true
+            }
+          }];
+        callback(currentPos);
+
       }, function(error) {
         processing = false;
         console.log('code: ' + error.code    + '\n' + 'message: ' + error.message + '\n');
@@ -56,19 +65,10 @@ angular.module('starter.location', ['ngCordova'])
   }
 
   return {
-    begin:function(lt,lg,cb) {
-      long = lg;
-      lat = lt;
+    watchPosition:function(cb) {
       callback = cb;
       interval = window.setInterval(hb, duration);
       hb();
-    },
-    end: function() {
-      window.clearInterval(interval);
-    },
-    setTarget: function(lg,lt) {
-      long = lg;
-      lat = lt;
     }
   };
 
