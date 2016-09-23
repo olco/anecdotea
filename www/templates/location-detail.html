@@ -1,0 +1,46 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="{{location.name}}">
+  <ion-content class="padding">
+    <div class="list card">
+
+      <div class="item item-image">
+        <img src="{{location.face}}">
+      </div>
+
+      <div class="item item-divider">
+        {{location.name}}
+      </div>
+
+      <a class="item item-avatar  item-icon-right" href="#/tab/locations/map/{{location.id}}">
+        <img src="img/compass.png" rotate degrees="heading">
+        <h2>Localistation</h2>
+        <p>{{location.dist | locationInit}}</p>
+        <i class="icon ion-map icon-accessory"></i>
+      </a>
+
+      <div class="item item-divider">
+        Le saviez-vous ?
+      </div>
+
+      <div class="item item-body">
+        <!--<img class="full-image" src="{{location.face}}">-->
+        <p>
+          {{location.lastText}}
+        </p>
+        <!--<p>
+          <a href="#" class="subdued">En savoir plus</a>
+        </p>-->
+      </div>
+
+
+
+
+    </div>
+  </ion-content>
+
+</ion-view>

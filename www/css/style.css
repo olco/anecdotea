@@ -1,1 +1,9 @@
 /* Empty. Add your own CSS if you like */
+
+
+.location-item{
+  /*  Simple transition */
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}

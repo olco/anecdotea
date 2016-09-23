@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'starter.location', 'ngCordova', 'openlayers-directive'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'starter.location', 'ngCordova', 'openlayers-directive', 'starter.directives', 'starter.filters' ])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -45,16 +45,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
-    views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
-      }
-    }
-  })
-
   .state('tab.locations', {
       url: '/locations',
       views: {
@@ -65,12 +55,22 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       }
     })
 
-  .state('tab.chat-detail', {
-    url: '/chats/:chatId',
+  .state('tab.location-detail', {
+    url: '/locations/:locationId',
     views: {
       'tab-locations': {
-        templateUrl: 'templates/chat-detail.html',
-        controller: 'ChatDetailCtrl'
+        templateUrl: 'templates/location-detail.html',
+        controller: 'LocationDetailCtrl'
+      }
+    }
+  })
+
+  .state('tab.location-map', {
+    url: '/locations/map/:locationId',
+    views: {
+      'tab-locations': {
+        templateUrl: 'templates/location-map.html',
+        controller: 'LocationMapCtrl'
       }
     }
   })
