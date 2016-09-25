@@ -3,11 +3,9 @@
 
     <openlayers data-tap-disabled="true" ol-markers="markers" ol-center="initPosition" width="100%" height="100%">
       <ol-marker ng-repeat="marker in markers" ol-marker-properties="marker"></ol-marker>
+	  <ol-marker ng-repeat="markerCurrent in markersCurrent"  lat="markerCurrent.lat" lon="markerCurrent.lon" ol-style="markerCurrent.style"></ol-marker>
     </openlayers>
 
   </ion-content>
 
-  <!--<div class="bar bar-footer bar-positive item-input-inset" >
-    <a class="button button-clear pull-right" ng-click='go()'>Y aller !</a>
-  </div>-->
 </ion-view>

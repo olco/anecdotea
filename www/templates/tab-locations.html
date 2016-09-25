@@ -1,17 +1,19 @@
 <ion-view view-title="{{title}}">
+
   <ion-content>
     <ion-list>
       <ion-item class="location-item item-remove-animate item-thumbnail-left item-icon-right"
-                ng-repeat="location in locations | filter:searchText | orderBy:'dist' | limitTo: 10"
+                ng-repeat="location in locations | filter:searchText | orderBy:'dist' | limitTo: 20"
                 type="item-text-wrap" href="#/tab/locations/{{location.id}}">
         <img ng-src="{{location.face}}">
         <h2>{{location.name}}</h2>
         <p>{{location.lastText}}</p>
         <p>{{location.dist | locationInit}}</p>
         <i class="icon ion-chevron-right icon-accessory"></i>
-
+		
       </ion-item>
     </ion-list>
+	<h1>&nbsp;</h1>
   </ion-content>
   <div class="bar bar-footer bar-positive item-input-inset">
     <label class="item-input-wrapper">
@@ -19,7 +21,7 @@
       <input type="search" placeholder="Search" ng-model="searchText">
     </label>
     <button class="button button-clear">
-      Cancel
+      Annuler
     </button>
   </div>
 </ion-view>

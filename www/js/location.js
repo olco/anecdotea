@@ -1,6 +1,6 @@
 angular.module('starter.location', ['ngCordova'])
 
-.factory('GeoAlert', function($cordovaGeolocation) {
+.factory('GeoAlert', function($cordovaGeolocation, Data) {
   console.log('GeoAlert service instantiated');
   var interval;
   var duration = 1000;
@@ -17,23 +17,33 @@ angular.module('starter.location', ['ngCordova'])
     processing = true;
     console.log('getCurrentPosition');
 
-    var posOptions = {maximumAge:Infinity, timeout: 30000, enableHighAccuracy: false};
+    var posOptions = {maximumAge:3000, timeout: 30000, enableHighAccuracy: true};
     $cordovaGeolocation
       .getCurrentPosition(posOptions)
       .then(function (position) {
         processing = false;
-        console.log(position.coords.latitude, position.coords.longitude);
+        //console.log(position.coords.latitude, position.coords.longitude);
 
         var currentPos =
-          {name:'You',
+          {
             lat:position.coords.latitude,
             lon:position.coords.longitude,
-            label: {
-              message: 'You',
-              show: false,
-              showOnMouseOver: true
-            }
+			style: { 
+				image: {
+                    icon: {
+                        anchor: [0.5, 1],
+                        anchorXUnits: 'fraction',
+                        anchorYUnits: 'fraction',
+                        opacity: 0.90,
+                        src: 'img/currentLoc.png'
+                    }
+                }
+			}
+
           };
+		
+		Data.currentPosition = currentPos ;
+		Data.sendCurrentPosition("");
         callback(currentPos);
 
       }, function(error) {

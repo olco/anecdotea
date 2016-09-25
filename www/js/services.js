@@ -1,6 +1,21 @@
 angular.module('starter.services', ['ngCordova'])
 
-.factory('Locations', function() {
+.factory('Data', function($rootScope) {
+  return {
+      notification : true,
+	  distance:0.09,
+	  heading:0,
+	  currentPosition: {
+		  'lon':-1, 
+		  'lat':-1
+	  },
+	  sendCurrentPosition: function(data) {
+		  $rootScope.$broadcast('currentPositionChanged', data);
+	  }
+  };
+})
+
+.factory('Locations', function(Data) {
 
   var locations = [{
     id: 0,
@@ -10,7 +25,13 @@ angular.module('starter.services', ['ngCordova'])
     dist: -1,
     dir: -1,
     lat:45.916711,
-    lon:-0.960687
+    lon:-0.960687,
+	notif:false,
+	label: {
+			message: '<img src="img/transbordeur.jpg" height="100px"/>',
+			show: false,
+            showOnMouseOver: false
+		}
   }, {
     id: 1,
     name: 'La place Colbert',
@@ -19,7 +40,8 @@ angular.module('starter.services', ['ngCordova'])
     dist: -1,
     dir: -1,
     lat:45.936629,
-    lon:-0.961625
+    lon:-0.961625,
+	notif:false
   }, {
     id: 2,
     name: 'La corderie royale',
@@ -28,7 +50,8 @@ angular.module('starter.services', ['ngCordova'])
     dist: -1,
     dir: -1,
     lat:45.937987,
-    lon:-0.955963
+    lon:-0.955963,
+	notif:false
   }, {
     id: 4,
     name: 'La porte du soleil',
@@ -37,7 +60,108 @@ angular.module('starter.services', ['ngCordova'])
     dist: -1,
     dir: -1,
     lat:45.935073,
-    lon:-0.957886
+    lon:-0.957886,
+	notif:false
+  }, {
+    id: 5,
+    name: 'L\'école Saint-Joseph',
+    lastText: 'L\'école Saint-Joseph était anciennement une chocolaterie.',
+    face: 'img/ecole_st_joseph.jpg',
+    dist: -1,
+    dir: -1,
+    lat:45.941796,
+    lon:-0.969635,
+	notif:false
+  }, {
+    id: 6,
+    name: 'L\'Hermione',
+    lastText: '',
+    face: 'img/hermione.jpg',
+    dist: -1,
+    dir: -1,
+    lat:45.935255, 
+    lon:-0.956998,
+	notif:false
+  }, {
+    id: 7,
+    name: 'Ancien hopîtal',
+    lastText: '',
+    face: 'img/ancien_hopital.jpg',
+    dist: -1,
+    dir: -1,
+    lat:45.942454,  
+    lon:-0.964031,
+	notif:false
+  }, {
+    id: 8,
+    name: 'Ancienne brasserie',
+    lastText: 'Ce batîment abritait jadis la brasserie de La Meuse. On devine encore le logo sur la facade.',
+    face: 'img/brasserie_meuse.jpg',
+    dist: -1,
+    dir: -1,
+    lat:45.940754,    
+    lon:-0.967521,
+	notif:false
+  }, {
+    id: 9,
+    name: 'Les halles',
+    lastText: 'Les mardi, jeudi et samedi matin se tient l\'un des plus grand marché de la région.',
+    face: 'img/halles.jpg',
+    dist: -1,
+    dir: -1,
+    lat:45.935012,   
+    lon:-0.959308,
+	notif:false 
+  }, {
+    id: 10,
+    name: 'Le musée de la marine',
+    lastText: '',
+    face: 'img/musee_marine.jpg',
+    dist: -1,
+    dir: -1,
+    lat:45.934475,    
+    lon:-0.957966,
+	notif:false
+  }, {
+    id: 11,
+    name: 'Hôtel Hebre de Saint-Clément',
+    lastText: '',
+    face: 'img/musee_hebre.jpg',
+    dist: -1,
+    dir: -1,
+    lat:45.935699,    
+    lon: -0.962597,
+	notif:false
+  }, {
+    id: 12,
+    name: 'La fontaine (place Colbert)',
+    lastText: '',
+    face: 'img/fontaine_colbert.jpg',
+    dist: -1,
+    dir: -1,
+    lat:45.936611, 
+    lon: -0.961245,
+	notif:false
+  }, {
+    id: 13,
+    name: 'Le théâtre de la coupe d\'or',
+    lastText: '',
+    face: 'img/theatre.jpg',
+    dist: -1,
+    dir: -1,
+    lat:45.937866, 
+    lon:-0.960912,
+	notif:false  
+  }, {
+    id: 14,
+    name: 'La boussole des marées',
+    lastText: '',
+    face: 'img/boussole_maree.jpg',
+    dist: -1,
+    dir: -1,
+    lat:45.936629, 
+    lon:-0.961633,
+	notif:false  
   }];
 
   // Credit: http://stackoverflow.com/a/27943/52160
@@ -94,8 +218,18 @@ angular.module('starter.services', ['ngCordova'])
       return null;
     },
     computeAllDist: function(lat, lon){
+	  var onlyOne = false ;
       for (var i = 0; i < locations.length; i++) {
         locations[i].dist = getDistanceFromLatLonInKm(lat,lon,locations[i].lat,locations[i].lon) ;
+		if(Data.notification == true){
+			if(locations[i].dist < Data.distance){
+				if(onlyOne == false && locations[i].notif == false){
+					onlyOne = true ;
+					navigator.vibrate(1000);
+				}
+				locations[i].notif = true ;
+			}
+		}
       }
       return null;
     },

@@ -7,7 +7,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'starter.location', 'ngCordova', 'openlayers-directive', 'starter.directives', 'starter.filters' ])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, Locations, GeoAlert, Data) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -22,6 +22,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     }
 
     //navigator.vibrate(1000);
+	GeoAlert.watchPosition(function() {
+		Locations.computeAllDist(Data.currentPosition.lat, Data.currentPosition.lon);
+	});
 
     console.log(navigator.userAgent);
 
@@ -85,12 +88,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     }
   })
 
-  .state('tab.account', {
-    url: '/account',
+  .state('tab.settings', {
+    url: '/settings',
     views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+      'tab-settings': {
+        templateUrl: 'templates/tab-settings.html',
+        controller: 'SettingsCtrl'
       }
     }
   });

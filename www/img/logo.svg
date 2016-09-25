@@ -7,16 +7,16 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   height="512"
+   height="192"
    version="1.1"
-   viewBox="0 0 511.99999 512"
-   width="512"
+   viewBox="0 0 192 192"
+   width="192"
    id="svg2"
    inkscape:version="0.91 r13725"
    sodipodi:docname="logo.svg"
-   inkscape:export-filename="D:\_anecdote\anecdotea\resources\splash.png"
-   inkscape:export-xdpi="388.125"
-   inkscape:export-ydpi="388.125">
+   inkscape:export-filename="C:\_anecdotea\resources\icon.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
   <metadata
      id="metadata16">
     <rdf:RDF>
@@ -25,7 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -38,8 +38,8 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1018"
+     inkscape:window-width="1536"
+     inkscape:window-height="801"
      id="namedview14"
      showgrid="false"
      showborder="true"
@@ -48,8 +48,8 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:zoom="0.64"
-     inkscape:cx="-123.73005"
-     inkscape:cy="142.90642"
+     inkscape:cx="197.375"
+     inkscape:cy="-170.98554"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -58,45 +58,26 @@
      id="desc6" />
   <defs
      id="defs8" />
-  <g
-     id="miu"
-     transform="matrix(21.27283,0,0,21.27283,0.55589402,103.4869)"
-     style="fill:#ffffff;fill-rule:evenodd;stroke:none;stroke-width:1">
-    <g
-       id="Artboard-1"
-       transform="translate(-503,-515)"
-       style="fill:#ffffff">
-      <g
-         id="slice"
-         transform="translate(215,119)"
-         style="fill:#ffffff" />
-      <path
-         d="m 521.02703,523.35506 c 0.009,-0.39125 0.004,-0.77169 -0.0131,-1.1361 C 521.00824,522.09555 521,521.50003 521,521.5 l 0,0 c 0,-1.28644 -2.85422,-2 -6.5,-2 -3.64578,0 -6.5,0.71356 -6.5,2 0,10e-6 -0.008,0.59555 -0.014,0.71896 -0.0659,1.41455 0.0458,3.07056 0.4816,4.66302 0.86614,3.1649 2.79873,5.11802 6.03238,5.11802 2.27915,0 3.91196,-0.97026 4.98059,-2.65121 2.90061,-0.0524 6.22639,-2.61697 5.22565,-4.88902 -0.40287,-0.91465 -1.1392,-1.36254 -2.05478,-1.39971 -0.50445,-0.0205 -1.02662,0.0826 -1.542,0.26513 -0.0281,0.01 -0.0556,0.0199 -0.0824,0.0299 z m -0.0645,1.11607 c -0.0739,0.79385 -0.21104,1.61037 -0.4301,2.41085 -0.138,0.50424 -0.30306,0.97772 -0.49615,1.41744 2.14097,-0.32376 4.32372,-2.145 3.75485,-3.43656 -0.24026,-0.54547 -0.62779,-0.7812 -1.18019,-0.80363 -0.35902,-0.0146 -0.76224,0.065 -1.16757,0.20859 -0.21942,0.0777 -0.38848,0.1545 -0.48084,0.20331 z m -0.9347,-1.83112 c 0.0265,1.23414 -0.094,2.64091 -0.45994,3.97801 C 518.80907,529.39062 517.21661,531 514.5,531 c -2.71661,0 -4.30907,-1.60938 -5.06784,-4.38198 -0.36593,-1.3371 -0.48646,-2.74387 -0.45994,-3.97801 1.13669,0.56058 3.16617,0.85999 5.52778,0.85999 2.36161,0 4.39109,-0.29941 5.52778,-0.85999 l 0,0 z M 509,521.5 c 0,-0.37041 2.51836,-1 5.5,-1 2.98164,0 5.5,0.62959 5.5,1 0,0.37041 -2.51836,1 -5.5,1 -2.98164,0 -5.5,-0.62959 -5.5,-1 z"
-         id="food-drink-cup-coffee-tea-drink-outline-stroke"
-         inkscape:connector-curvature="0"
-         style="fill:#ffffff"
-         sodipodi:nodetypes="csccssssscssscccscssscccssscscccsssss" />
-    </g>
-  </g>
-  <g
-     transform="matrix(0.77308693,-0.63430008,0.63430008,0.77308693,0,0)"
-     style="font-style:normal;font-weight:normal;font-size:35.73643875px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     id="text3344">
-    <path
-       d="m 127.93,273.40186 -34.000224,0 -6.595885,22.22186 -27.953993,0 37.298164,-114.32869 14.212568,0 0,0.0785 0.0785,-0.0785 14.21256,0 37.37669,114.32869 -27.95399,0 -6.67441,-22.22186 z m -27.87547,-20.41583 21.75072,0 -10.67906,-35.49215 -0.47113,0 -10.60053,35.49215 z"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:160.8139801px;font-family:Roboto;-inkscape-font-specification:Roboto;fill:#ffffff"
-       id="path4153" />
-  </g>
   <rect
-     id="rect3348"
-     width="47.817394"
-     height="52.504894"
-     x="261.24756"
-     y="329.49756"
-     style="opacity:1;fill:none;stroke:#ffffff;stroke-width:12.4951067;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
-  <path
-     style="fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:14;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-     d="m 284.375,269.8125 0,56.25"
-     id="path4150"
-     inkscape:connector-curvature="0" />
-</svg>
+     id="rect3367"
+     width="193.71202"
+     height="193.125"
+     x="-1.5672493"
+     y="1.375"
+     style="fill:#0066ff" />
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot3336-1-1"
+     style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     transform="matrix(2.147546,0,0,1.7765059,-86.14716,-253.29712)"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90"><flowRegion
+       id="flowRegion3338-4-9"><rect
+         id="rect3340-9-7"
+         width="600"
+         height="245.71428"
+         x="51.42857"
+         y="152.3622"
+         style="fill:#ffffff" /></flowRegion><flowPara
+       id="flowPara3342-8-2"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:70px;font-family:'Master Of Break';-inkscape-font-specification:'Master Of Break';fill:#ffffff">R</flowPara></flowRoot></svg>

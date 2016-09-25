@@ -1,13 +1,9 @@
-<ion-view view-title="Anecdote la plus proche">
+<ion-view view-title="Vous et Rochefort sur une carte">
   <ion-content >
 
-    <div class="card">
-      <div class="item item-text-wrap">
-        This is a basic Card which contains an item that has wrapping text.
-      </div>
-    </div>
-    <openlayers data-tap-disabled="true" ol-markers="markers" ol-center="initPosition" width="100%" height="100%">
-      <ol-marker ng-repeat="marker in markers" lat="marker.lat" lon="marker.lon"></ol-marker>
+    <openlayers data-tap-disabled="true" ol-center="initPosition" width="100%" height="100%">
+      <ol-marker ng-repeat="marker in markers" lat="marker.lat" lon="marker.lon" ol-style="marker.style"></ol-marker>
+	  <ol-marker ng-repeat="markerAll in allMarkers" ol-marker-properties="markerAll" ng-click="showDetails(markerAll)"></ol-marker>
     </openlayers>
 
   </ion-content>
