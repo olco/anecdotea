@@ -6,7 +6,7 @@ angular.module('starter.services', ['ngCordova'])
 	  distance:0.09,
 	  heading:0,
 	  currentPosition: {
-		  'lon':-1, 
+		  'lon':-1,
 		  'lat':-1
 	  },
 	  sendCurrentPosition: function(data) {
@@ -26,12 +26,7 @@ angular.module('starter.services', ['ngCordova'])
     dir: -1,
     lat:45.916711,
     lon:-0.960687,
-	notif:false,
-	label: {
-			message: '<img src="img/transbordeur.jpg" height="100px"/>',
-			show: false,
-            showOnMouseOver: false
-		}
+	  notif:false
   }, {
     id: 1,
     name: 'La place Colbert',
@@ -41,7 +36,7 @@ angular.module('starter.services', ['ngCordova'])
     dir: -1,
     lat:45.936629,
     lon:-0.961625,
-	notif:false
+	  notif:false
   }, {
     id: 2,
     name: 'La corderie royale',
@@ -51,7 +46,7 @@ angular.module('starter.services', ['ngCordova'])
     dir: -1,
     lat:45.937987,
     lon:-0.955963,
-	notif:false
+	  notif:false
   }, {
     id: 4,
     name: 'La porte du soleil',
@@ -61,7 +56,7 @@ angular.module('starter.services', ['ngCordova'])
     dir: -1,
     lat:45.935073,
     lon:-0.957886,
-	notif:false
+	  notif:false
   }, {
     id: 5,
     name: 'L\'école Saint-Joseph',
@@ -71,7 +66,7 @@ angular.module('starter.services', ['ngCordova'])
     dir: -1,
     lat:45.941796,
     lon:-0.969635,
-	notif:false
+	  notif:false
   }, {
     id: 6,
     name: 'L\'Hermione',
@@ -79,9 +74,9 @@ angular.module('starter.services', ['ngCordova'])
     face: 'img/hermione.jpg',
     dist: -1,
     dir: -1,
-    lat:45.935255, 
+    lat:45.935255,
     lon:-0.956998,
-	notif:false
+	  notif:false
   }, {
     id: 7,
     name: 'Ancien hopîtal',
@@ -89,9 +84,9 @@ angular.module('starter.services', ['ngCordova'])
     face: 'img/ancien_hopital.jpg',
     dist: -1,
     dir: -1,
-    lat:45.942454,  
+    lat:45.942454,
     lon:-0.964031,
-	notif:false
+	  notif:false
   }, {
     id: 8,
     name: 'Ancienne brasserie',
@@ -99,9 +94,9 @@ angular.module('starter.services', ['ngCordova'])
     face: 'img/brasserie_meuse.jpg',
     dist: -1,
     dir: -1,
-    lat:45.940754,    
+    lat:45.940754,
     lon:-0.967521,
-	notif:false
+	  notif:false
   }, {
     id: 9,
     name: 'Les halles',
@@ -109,9 +104,9 @@ angular.module('starter.services', ['ngCordova'])
     face: 'img/halles.jpg',
     dist: -1,
     dir: -1,
-    lat:45.935012,   
+    lat:45.935012,
     lon:-0.959308,
-	notif:false 
+	  notif:false
   }, {
     id: 10,
     name: 'Le musée de la marine',
@@ -119,9 +114,9 @@ angular.module('starter.services', ['ngCordova'])
     face: 'img/musee_marine.jpg',
     dist: -1,
     dir: -1,
-    lat:45.934475,    
+    lat:45.934475,
     lon:-0.957966,
-	notif:false
+	  notif:false
   }, {
     id: 11,
     name: 'Hôtel Hebre de Saint-Clément',
@@ -129,9 +124,9 @@ angular.module('starter.services', ['ngCordova'])
     face: 'img/musee_hebre.jpg',
     dist: -1,
     dir: -1,
-    lat:45.935699,    
+    lat:45.935699,
     lon: -0.962597,
-	notif:false
+	  notif:false
   }, {
     id: 12,
     name: 'La fontaine (place Colbert)',
@@ -139,9 +134,9 @@ angular.module('starter.services', ['ngCordova'])
     face: 'img/fontaine_colbert.jpg',
     dist: -1,
     dir: -1,
-    lat:45.936611, 
+    lat:45.936611,
     lon: -0.961245,
-	notif:false
+	  notif:false
   }, {
     id: 13,
     name: 'Le théâtre de la coupe d\'or',
@@ -149,9 +144,9 @@ angular.module('starter.services', ['ngCordova'])
     face: 'img/theatre.jpg',
     dist: -1,
     dir: -1,
-    lat:45.937866, 
+    lat:45.937866,
     lon:-0.960912,
-	notif:false  
+	  notif:false
   }, {
     id: 14,
     name: 'La boussole des marées',
@@ -159,9 +154,9 @@ angular.module('starter.services', ['ngCordova'])
     face: 'img/boussole_maree.jpg',
     dist: -1,
     dir: -1,
-    lat:45.936629, 
+    lat:45.936629,
     lon:-0.961633,
-	notif:false  
+	  notif:false
   }];
 
   // Credit: http://stackoverflow.com/a/27943/52160

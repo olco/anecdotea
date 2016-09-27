@@ -1,8 +1,19 @@
-<ion-modal-view>
-<ion-header-bar>
-  <h1 class="title">My Modal title</h1>
-</ion-header-bar>
-<ion-content>
-  Hello!
-</ion-content>
-</ion-modal-view>
+<ion-view view-title="Intro">
+  <ion-header-bar class="bar bar-header bar-positive">
+    <h1 class="title">New Contact</h1>
+    <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+  </ion-header-bar>
+  <ion-content scroll="false">
+      <ion-slides >
+        <ion-slide-page>
+          <div class="item-content"><h1>BLUE</h1></div>
+        </ion-slide-page>
+        <ion-slide-page>
+          <div class="item-content"><h1>YELLOW</h1></div>
+        </ion-slide-page>
+        <ion-slide-page>
+          <div class="item-content"><h1>PINK</h1></div>
+        </ion-slide-page>
+      </ion-slides>
+  </ion-content>
+</ion-view>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.ionicframework.anecdotea946379" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>à Rochefort</name>
-  <description>&#xD;
-      Découvrez Rochefort.&#xD;
+  <description>&#xD;&#xD;
+      Découvrez Rochefort.&#xD;&#xD;
   </description>
-  <author email="ocosquer@gmail.com" href="http://example.com.com/">&#xD;
-      Olivier COSQUER&#xD;
+  <author email="ocosquer@gmail.com" href="http://example.com.com/">&#xD;&#xD;
+      Olivier COSQUER&#xD;&#xD;
   </author>
   <content src="index.html"/>
   <access origin="*"/>
