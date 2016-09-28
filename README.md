@@ -1,6 +1,6 @@
 # Anecdotea
 
-Anecdotea is a mobile application for localize anecdotes around the position of the user.
+Anecdotea is a mobile application for localize point of interests around the position of the user.
 
 For example, it can be used in a touristic place with many points of interests.
 
