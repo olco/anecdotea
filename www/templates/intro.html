@@ -3,10 +3,6 @@
 
     <ion-slides slider="swiper">
       <ion-slide-page>
-        <img src="img/ancre.png"/>
-        <h2>Merci à vous !</h2>
-      </ion-slide-page>
-      <ion-slide-page>
         <img src="img/intro_trouver.png"/>
         <h2>Trouvez autour de vous...</h2>
       </ion-slide-page>
@@ -18,13 +14,13 @@
     </ion-slides>
 
   </ion-content>
-  <ion-footer-bar align-title="left" class="bar-light">
+  <ion-footer-bar align-title="left" class="bar-positive">
     <div class="buttons">
-      <button class="button button-clear button-positive" ng-click="hideForever()">Ne plus ouvrir</button>
+      <button class="button button-clear button-light" ng-click="hideForever()">Toujours passer</button>
     </div>
     <h1 class="title"></h1>
     <div class="buttons">
-      <button class="button button-positive pull-right" ng-click="modal.hide()">OK</button>
+      <button class="button button-light pull-right" ng-click="modal.hide()">Passer</button>
     </div>
   </ion-footer-bar>
 </ion-view>

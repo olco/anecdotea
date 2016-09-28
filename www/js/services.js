@@ -221,6 +221,18 @@ angular.module('starter.services', ['ngCordova'])
 				if(onlyOne == false && locations[i].notif == false){
 					onlyOne = true ;
 					navigator.vibrate([500, 100, 500, 100, 500]);
+					
+					
+					function alertDismissed() {
+						// do something
+					}
+
+					navigator.notification.alert(
+						locations[i].name+' est à proximité !',  // message
+						alertDismissed,         // callback
+						'Vous êtes proche !',            // title
+						'Ok'                  // buttonName
+					);
 				}
 				locations[i].notif = true ;
 			}
