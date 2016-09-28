@@ -220,7 +220,7 @@ angular.module('starter.services', ['ngCordova'])
 			if(locations[i].dist < Data.distance){
 				if(onlyOne == false && locations[i].notif == false){
 					onlyOne = true ;
-					navigator.vibrate(1000);
+					navigator.vibrate([500, 100, 500, 100, 500]);
 				}
 				locations[i].notif = true ;
 			}

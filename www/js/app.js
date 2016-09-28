@@ -16,7 +16,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       Locations.computeAllDist(Data.currentPosition.lat, Data.currentPosition.lon);
     });
 
-    console.log(navigator.userAgent);
+    navigator.vibrate([500, 100, 500, 100, 500]);
 
   });
 })
