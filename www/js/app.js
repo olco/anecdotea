@@ -15,9 +15,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     GeoAlert.watchPosition(function() {
       Locations.computeAllDist(Data.currentPosition.lat, Data.currentPosition.lon);
     });
-
-    navigator.vibrate([500, 100, 500, 100, 500]);
-
   });
 })
 
@@ -79,7 +76,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         controller: 'SettingsCtrl'
       }
     }
-  });
+  })
+
+  .state('tab.settings-a-propos', {
+    url: '/settings/apropos',
+    views: {
+      'tab-settings': {
+        templateUrl: 'templates/settings-a-propos.html',
+        controller: 'SettingsAProposCtrl'
+      }
+    }
+  })
+  ;
 
   $urlRouterProvider.otherwise('/tab/locations');
 

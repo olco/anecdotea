@@ -28,7 +28,7 @@ angular.module('starter.location', ['ngCordova'])
           {
             lat:position.coords.latitude,
             lon:position.coords.longitude,
-			style: { 
+			style: {
 				image: {
                     icon: {
                         anchor: [0.5, 1],
@@ -41,11 +41,10 @@ angular.module('starter.location', ['ngCordova'])
 			}
 
           };
-		
+
 		Data.currentPosition = currentPos ;
 		Data.sendCurrentPosition("");
         callback(currentPos);
-
       }, function(error) {
         processing = false;
         console.log('code: ' + error.code    + '\n' + 'message: ' + error.message + '\n');

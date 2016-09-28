@@ -1,19 +1,30 @@
-<ion-view view-title="Intro">
-  <ion-header-bar class="bar bar-header bar-positive">
-    <h1 class="title">New Contact</h1>
-    <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
-  </ion-header-bar>
-  <ion-content scroll="false">
-      <ion-slides >
-        <ion-slide-page>
-          <div><h1>BLUE</h1></div>
-        </ion-slide-page>
-        <ion-slide-page>
-          <div><h1>YELLOW</h1></div>
-        </ion-slide-page>
-        <ion-slide-page>
-          <div><h1>PINK</h1></div>
-        </ion-slide-page>
-      </ion-slides>
+<ion-view  view-title="{{title}}">
+  <ion-content scroll="false" class="intro has-footer" >
+
+    <ion-slides slider="swiper">
+      <ion-slide-page>
+        <img src="img/ancre.png"/>
+        <h2>Merci à vous !</h2>
+      </ion-slide-page>
+      <ion-slide-page>
+        <img src="img/intro_trouver.png"/>
+        <h2>Trouvez autour de vous...</h2>
+      </ion-slide-page>
+      <ion-slide-page>
+        <img src="img/intro_lieux.png"/>
+        <h2>... des lieux incontournables !</h2>
+        <img src="img/logo_a_rochefort_small.png"/>
+       </ion-slide-page>
+    </ion-slides>
+
   </ion-content>
+  <ion-footer-bar align-title="left" class="bar-light">
+    <div class="buttons">
+      <button class="button button-clear button-positive" ng-click="hideForever()">Ne plus ouvrir</button>
+    </div>
+    <h1 class="title"></h1>
+    <div class="buttons">
+      <button class="button button-positive pull-right" ng-click="modal.hide()">OK</button>
+    </div>
+  </ion-footer-bar>
 </ion-view>

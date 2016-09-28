@@ -39,18 +39,23 @@ angular.module('starter.controllers', [])
     Locations.remove(location);
   };
 
+  $scope.intro = ($localStorage.intro === undefined)?true:$localStorage.intro;
+
+  console.log(">>>>>>> "+$scope.intro+" "+$localStorage.intro);
+
   $ionicModal.fromTemplateUrl('templates/intro.html', {
     scope: $scope
   }).then(function(modal) {
     $scope.modal = modal;
-    //if(!$localStorage.intro){
+    if($scope.intro == true){
       $scope.modal.show();
-    //}
+    }
   });
 
-  $scope.$on('modal.hidden', function() {
-    $localStorage.intro = true ;
-  });
+  $scope.hideForever = function(location) {
+    $localStorage.intro = false ;
+    $scope.modal.hide();
+  };
 
 })
 
@@ -100,7 +105,19 @@ angular.module('starter.controllers', [])
   );
 })
 
-.controller('SettingsCtrl', function($scope, Data) {
+.controller('SettingsCtrl', function($scope, $localStorage, Data) {
 	$scope.notification = Data.notification ;
-	$scope.distance = Data.distance * 1000;
+  $scope.intro = $localStorage.intro ;
+
+  console.log("Init scope intro "+$localStorage.intro+" "+$scope.intro);
+
+  $scope.introChange = function() {
+    $scope.intro = !$scope.intro;
+    $localStorage.intro = $scope.intro ;
+    console.log("Modification scope intro "+$localStorage.intro+" "+$scope.intro);
+  };
+})
+
+.controller('SettingsAProposCtrl', function($scope) {
+
 });
