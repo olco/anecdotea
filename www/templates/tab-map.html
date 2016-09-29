@@ -1,10 +1,11 @@
 <ion-view view-title="Tous les lieux sur une carte">
   <ion-content >
-
     <openlayers data-tap-disabled="true" ol-center="initPosition" width="100%" height="100%">
       <ol-marker ng-repeat="marker in markers" lat="marker.lat" lon="marker.lon" ol-style="marker.style"></ol-marker>
-	  <ol-marker ng-repeat="markerAll in allMarkers" ol-marker-properties="markerAll" ng-click="showDetails(markerAll)"></ol-marker>
+      <ol-marker ng-repeat="markerAll in allMarkers" ol-marker-properties="markerAll" ng-click="showDetails(markerAll)"></ol-marker>
     </openlayers>
-
   </ion-content>
+  <div class="bar bar-footer bar-positive item-input-inset">
+    <button ng-click="showOrHideNames()" class="button  button-block  button-stable">{{showNamesButton}}</button>
+  </div>
 </ion-view>

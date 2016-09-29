@@ -10,34 +10,25 @@ angular.module('starter.controllers', [])
   $scope.initPosition = {lat: 45.936629, lon: -0.955963, zoom: 13 } ;
   $scope.controls = {zoom: true, rotate: true,  attribution: true  } ;
 
+  $scope.showNamesButton = "Afficher les noms";
+  $scope.showNames = false;
+
+  $scope.showOrHideNames = function(){
+    $scope.showNames = !$scope.showNames ;
+    $scope.allMarkers.forEach(function(element, index, array){
+      $scope.allMarkers[index].label = { show : $scope.showNames, message : $scope.allMarkers[index].name, showOnMouseClick: true }  ;
+      $scope.showNamesButton = ($scope.showNames==false) ? "Afficher les noms" : "Masquer les noms" ;
+    });
+  };
+
   $rootScope.$on('currentPositionChanged',
-	function(event, data) {
-	    $scope.markers = [] ;
-
-		$scope.markers.push(Data.currentPosition);
-		/*if(!$scope.calibrate){
-			var bestZoom = 17 ;
-		    if(Data.currentPosition.dist <= 0.5){bestZoom = 15 ; }
-		    else if(Data.currentPosition.dist <= 1){bestZoom = 14 ; }
-		    else if(Data.currentPosition.dist <= 3){bestZoom = 12 ; }
-		    else if(Data.currentPosition.dist <= 10){bestZoom = 10 ; }
-		    else if(Data.currentPosition.dist <= 50){bestZoom = 9 ; }
-		    else if(Data.currentPosition.dist <= 200){bestZoom = 6 ; }
-		    else if(Data.currentPosition.dist <= 500){bestZoom = 5 ; }
-		    else if(Data.currentPosition.dist <= 1000){bestZoom = 4 ; }
-		    else if(Data.currentPosition.dist <= 5000){bestZoom = 3 ; }
-		    else {bestZoom = 1 ; }
-
-			$scope.initPosition.zoom = bestZoom ;
-			$scope.calibrate = true ;
-		}*/
-	}
+    function(event, data) {
+      $scope.markers = [] ;
+      $scope.markers.push(Data.currentPosition);
+    }
   );
 
-  function showDetails(marker) {
-	console.log("showDetails(marker");
-	$scope.allMarkers[marker.id].label.show = true ;
-  }
+  $scope.showOrHideNames();
 
 })
 
