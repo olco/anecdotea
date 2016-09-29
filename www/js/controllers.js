@@ -6,7 +6,7 @@ angular.module('starter.controllers', [])
   $scope.markers.push(Data.currentPosition);
   $scope.allMarkers = Locations.all();
   //$scope.calibrate = false ;
-  
+
   $scope.initPosition = {lat: 45.936629, lon: -0.955963, zoom: 13 } ;
   $scope.controls = {zoom: true, rotate: true,  attribution: true  } ;
 
@@ -17,17 +17,17 @@ angular.module('starter.controllers', [])
 		$scope.markers.push(Data.currentPosition);
 		/*if(!$scope.calibrate){
 			var bestZoom = 17 ;
-		    if(Data.currentPosition.dist <= 0.5){bestZoom = 15 ; } 
-		    else if(Data.currentPosition.dist <= 1){bestZoom = 14 ; } 
-		    else if(Data.currentPosition.dist <= 3){bestZoom = 12 ; } 
-		    else if(Data.currentPosition.dist <= 10){bestZoom = 10 ; } 
+		    if(Data.currentPosition.dist <= 0.5){bestZoom = 15 ; }
+		    else if(Data.currentPosition.dist <= 1){bestZoom = 14 ; }
+		    else if(Data.currentPosition.dist <= 3){bestZoom = 12 ; }
+		    else if(Data.currentPosition.dist <= 10){bestZoom = 10 ; }
 		    else if(Data.currentPosition.dist <= 50){bestZoom = 9 ; }
 		    else if(Data.currentPosition.dist <= 200){bestZoom = 6 ; }
 		    else if(Data.currentPosition.dist <= 500){bestZoom = 5 ; }
 		    else if(Data.currentPosition.dist <= 1000){bestZoom = 4 ; }
 		    else if(Data.currentPosition.dist <= 5000){bestZoom = 3 ; }
 		    else {bestZoom = 1 ; }
-			
+
 			$scope.initPosition.zoom = bestZoom ;
 			$scope.calibrate = true ;
 		}*/
@@ -45,7 +45,7 @@ angular.module('starter.controllers', [])
 
   $scope.locations = Locations.all();
 
-  $scope.title = '<img src="img/logo_a_rochefort.png" height="30" style="vertical-align:middle;"/>' ;
+  $scope.title = '<img src="img/logo.png" height="30" style="vertical-align:middle;"/>' ;
 
   $rootScope.$on('currentPositionChanged',
 	  function(event, data) {
@@ -97,22 +97,22 @@ angular.module('starter.controllers', [])
 
   $scope.controls = {zoom: true, rotate: true,  attribution: true  } ;
   $scope.location = Locations.get($stateParams.locationId);
-  
+
   var bestZoom = 17 ;
-  if($scope.location.dist <= 0.5){bestZoom = 15 ; } 
-  else if($scope.location.dist <= 1){bestZoom = 14 ; } 
-  else if($scope.location.dist <= 3){bestZoom = 12 ; } 
-  else if($scope.location.dist <= 10){bestZoom = 10 ; } 
+  if($scope.location.dist <= 0.5){bestZoom = 15 ; }
+  else if($scope.location.dist <= 1){bestZoom = 14 ; }
+  else if($scope.location.dist <= 3){bestZoom = 12 ; }
+  else if($scope.location.dist <= 10){bestZoom = 10 ; }
   else if($scope.location.dist <= 50){bestZoom = 9 ; }
   else if($scope.location.dist <= 200){bestZoom = 6 ; }
   else if($scope.location.dist <= 500){bestZoom = 5 ; }
   else if($scope.location.dist <= 1000){bestZoom = 4 ; }
   else if($scope.location.dist <= 5000){bestZoom = 3 ; }
   else {bestZoom = 1 ; }
-  
+
   $scope.initPosition = {
-	  lat: $scope.location.lat, 
-	  lon: $scope.location.lon, 
+	  lat: $scope.location.lat,
+	  lon: $scope.location.lon,
 	  zoom: bestZoom
 	  } ;
 
@@ -125,7 +125,7 @@ angular.module('starter.controllers', [])
       showOnMouseOver: true
     }
   };
-  
+
   $scope.markers = [] ;
   $scope.markers.push($scope.locPos);
   $scope.markersCurrent = [] ;
@@ -139,7 +139,7 @@ angular.module('starter.controllers', [])
   );
 })
 
-.controller('SettingsCtrl', function($scope, $localStorage, Data) { 
+.controller('SettingsCtrl', function($scope, $localStorage, Data) {
   $scope.notification = Data.notification ;
   $scope.distance = Data.distance * 1000;
   $scope.intro = $localStorage.intro ;

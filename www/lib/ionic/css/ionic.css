@@ -6339,7 +6339,7 @@ button.item.item-button-right {
 .item-thumbnail-left,
 .item-thumbnail-left .item-content {
   padding-top: 8px;
-  padding-left: 106px;
+  padding-left: 131px;
   min-height: 100px; }
   .item-thumbnail-left > img:first-child,
   .item-thumbnail-left .item-image,
@@ -6348,7 +6348,7 @@ button.item.item-button-right {
     position: absolute;
     top: 10px;
     left: 10px;
-    max-width: 80px;
+    max-width: 105px;
     max-height: 80px;
     width: 100%;
     height: 100%; }
