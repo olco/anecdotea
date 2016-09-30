@@ -3,14 +3,14 @@
   <ion-content>
     <ion-list>
       <ion-item class="location-item item-thumbnail-left item-icon-right"
-                ng-repeat="location in locations | filter:searchText | orderBy:'dist' | limitTo: 20"
+                ng-repeat="location in locations | filter:searchText | orderBy:'dist'"
                 type="item-text-wrap" href="#/tab/locations/{{location.id}}">
         <img ng-src="{{location.face}}">
         <h2>{{location.name}}</h2>
-        <p>{{location.lastText}}</p>
+        <p>{{location.cat}} : {{location.lastText}}</p>
         <p>{{location.dist | locationInit}}</p>
         <i class="icon ion-chevron-right icon-accessory"></i>
-		
+
       </ion-item>
     </ion-list>
 	<h1>&nbsp;</h1>
