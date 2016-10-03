@@ -581,8 +581,8 @@ angular.module('starter.services', ['ngCordova'])
   }, {
     id: 52,
     name: 'Le puit rue Pasteur',
-    lastText: 'img/puit_pasteur.jpg',
-    face: '',
+    lastText: '',
+    face: 'img/puit_pasteur.jpg',
     dist: -1,
     dir: -1,
     lat: 45.942571,
