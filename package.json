@@ -1,7 +1,7 @@
 {
   "name": "Anecdotea",
   "version": "1.1.1",
-  "description": "Anecdotea: An Ionic project",
+  "description": "Anecdotea",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",

@@ -17,7 +17,7 @@ angular.module('starter.location', ['ngCordova'])
     processing = true;
     console.log('getCurrentPosition');
 
-    var posOptions = {maximumAge:3000, timeout: 30000, enableHighAccuracy: true};
+    var posOptions = {maximumAge: 0, timeout: 10000, enableHighAccuracy: true};
     $cordovaGeolocation
       .getCurrentPosition(posOptions)
       .then(function (position) {
@@ -28,22 +28,22 @@ angular.module('starter.location', ['ngCordova'])
           {
             lat:position.coords.latitude,
             lon:position.coords.longitude,
-			style: {
-				image: {
-                    icon: {
-                        anchor: [0.5, 1],
-                        anchorXUnits: 'fraction',
-                        anchorYUnits: 'fraction',
-                        opacity: 0.90,
-                        src: 'img/currentLoc.png'
-                    }
+            style: {
+              image: {
+                icon: {
+                  anchor: [0.5, 1],
+                  anchorXUnits: 'fraction',
+                  anchorYUnits: 'fraction',
+                  opacity: 0.90,
+                  src: 'img/currentLoc.png'
                 }
-			}
+                }
+            }
 
           };
 
-		Data.currentPosition = currentPos ;
-		Data.sendCurrentPosition("");
+		    Data.currentPosition = currentPos ;
+		    Data.sendCurrentPosition("");
         callback(currentPos);
       }, function(error) {
         processing = false;
